@@ -1,0 +1,28 @@
+/* pages/sliderBar/sliderbar.wxss */
+.scroll-view-c{
+flex: 1;
+width: 50%;
+background-color: aquamarine;
+height: 60rpx;
+}
+.slider-item{
+display: inline;
+padding: 5rpx 40rpx;
+border-right: 1rpx solid #999999;
+}
+.image-view{
+    width: 60rpx;
+    height: 60rpx;
+    margin: 0 17rpx
+}
+image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.outer{
+    display: flex;
+    width: 100%;
+    padding: 300rpx 0;
+    justify-content: space-around;
+    align-items: center;
+}

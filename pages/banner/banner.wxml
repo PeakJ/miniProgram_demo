@@ -1,0 +1,33 @@
+<!--pages/banner/banner.wxml-->
+<view class="container">
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            获取头像昵称
+        </button>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <button open-type="contact" />
+    <view>
+        <view>
+            <text class="user-motto">{{motto}}</text>
+        </view>
+    </view>
+    <swiper indicator-dots="{{true}}" indicator-active-color="#F00" 
+    previous-margin="10px" next-margin="10px" style="width:100%"
+    autoplay current="1" interval="2500" circular
+    >
+        <swiper-item>
+            <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" style="width:350px;height:150px;" />
+        </swiper-item>
+        <swiper-item>
+            <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" style="width:350px;height:150px;" />
+        </swiper-item>
+         <swiper-item>
+            <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" style="width:350px;height:150px;" />
+        </swiper-item>
+    </swiper>
+    <!-- <script src="https://gist.github.com/PeakJ/21a47bf2a804d8bb77ca55fa9071d9fa.js"></script> -->
+</view>
