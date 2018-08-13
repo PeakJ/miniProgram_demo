@@ -12,6 +12,10 @@ Page({
       },{
         name:'滑动菜单',
         route:'/pages/sliderBar/sliderbar'
+      },
+      {
+        name:'地图',
+        route:'/pages/map/map'
       }
     ]
   },

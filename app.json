@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/banner/banner",
-    "pages/sliderBar/sliderbar"
+    "pages/sliderBar/sliderbar",
+    "pages/map/map"
   ],
   "window": {
     "navigationBarTitleText": "Demo",

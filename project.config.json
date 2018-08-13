@@ -38,7 +38,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "pages/sliderBar/sliderbar",
+					"pathName": "pages/map/map",
 					"query": "",
 					"scene": "1001"
 				}
