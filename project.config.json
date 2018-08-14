@@ -8,10 +8,11 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.2.2",
 	"appid": "wxbf14e6482a67a683",
 	"projectname": "smallProject",
 	"isGameTourist": false,
@@ -38,7 +39,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "pages/map/map",
+					"pathName": "pages/share/share",
 					"query": "",
 					"scene": "1001"
 				}

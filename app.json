@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/banner/banner",
     "pages/sliderBar/sliderbar",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/share/share"
   ],
   "window": {
     "navigationBarTitleText": "Demo",

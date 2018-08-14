@@ -16,6 +16,10 @@ Page({
       {
         name:'地图',
         route:'/pages/map/map'
+      },
+      {
+        name:'分享示例',
+        route: '/pages/share/share'
       }
     ]
   },

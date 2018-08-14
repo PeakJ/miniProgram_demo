@@ -1,0 +1,23 @@
+{
+  "name": "miniprogram_demo",
+  "version": "1.0.0",
+  "description": "a demo of wechat miniProgram",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeakJ/miniProgram_demo.git"
+  },
+  "keywords": [
+    "miniProgram"
+  ],
+  "author": "jiangfeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeakJ/miniProgram_demo/issues"
+  },
+  "homepage": "https://github.com/PeakJ/miniProgram_demo#readme",
+  "dependencies": {}
+}
