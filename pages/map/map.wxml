@@ -1,5 +1,4 @@
 <view class="container">
-    <text>pages/map/map.wxml</text>
     <map id="myMap" longitude="{{longitude}}"  latitude="{{latitude}}"
     show-location
     markers="{{markers}}"

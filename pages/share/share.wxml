@@ -1,3 +1,6 @@
 <view class="container">
-    <text>pages/share/share.wxml</text>
+    <button open-type="share">分享按钮</button>
+    <button type="primary" bindtap="showShareMenu">showShareMenu</button>
+    <button type="primary" bindtap="hideShareMenu">hideShareMenu</button>
+    <button type="primary" bindtap="updateShareMenu">updateShareMenu</button>
 </view>
