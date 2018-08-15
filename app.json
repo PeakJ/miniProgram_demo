@@ -5,7 +5,8 @@
     "pages/banner/banner",
     "pages/sliderBar/sliderbar",
     "pages/map/map",
-    "pages/share/share"
+    "pages/share/share",
+    "pages/scanCode/scanCode"
   ],
   "window": {
     "navigationBarTitleText": "Demo",

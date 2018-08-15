@@ -39,7 +39,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "pages/share/share",
+					"pathName": "pages/scanCode/scanCode",
 					"query": "",
 					"scene": "1001"
 				}

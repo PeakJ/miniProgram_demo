@@ -1,0 +1,4 @@
+<!--pages/scanCode/scanCode.wxml-->
+<view class="container">
+<button size="default" type="primary" plain="false" bindtap="scanCode">点我扫码</button>
+</view>

@@ -20,6 +20,10 @@ Page({
       {
         name:'分享示例',
         route: '/pages/share/share'
+      },
+      {
+        name: '扫码功能',
+        route: '/pages/scanCode/scanCode'
       }
     ]
   },
