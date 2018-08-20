@@ -3,11 +3,11 @@
   <view class="menu">
     <text>菜单</text>
   </view>
-  <view wx:for="{{menus}}" wx:key="{{index}}">
+  <block wx:for="{{menus}}" wx:key="{{index}}">
     <navigator url="{{item.route}}" class="menu-item" 
     hover-stop-propagation="{{true}}" hover-class="none">
       <text class="name-text">{{item.name}}</text>
       <icon type="download" size="16" color="green" class="icon"></icon>
     </navigator>
-  </view>
+  </block>
 </view>

@@ -39,7 +39,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "pages/scanCode/scanCode",
+					"pathName": "pages/deviceInfo/deviceInfo",
 					"query": "",
 					"scene": "1001"
 				}

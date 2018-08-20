@@ -24,6 +24,10 @@ Page({
       {
         name: '扫码功能',
         route: '/pages/scanCode/scanCode'
+      },
+      {
+        name: '设备信息展示',
+        route: '/pages/deviceInfo/deviceInfo'
       }
     ]
   },

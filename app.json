@@ -6,7 +6,8 @@
     "pages/sliderBar/sliderbar",
     "pages/map/map",
     "pages/share/share",
-    "pages/scanCode/scanCode"
+    "pages/scanCode/scanCode",
+    "pages/deviceInfo/deviceInfo"
   ],
   "window": {
     "navigationBarTitleText": "Demo",

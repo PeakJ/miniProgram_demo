@@ -1,0 +1,12 @@
+/* pages/deviceInfo/deviceInfo.wxss */
+.outer-view{
+    padding: 17px;
+    text-align: center;
+}
+.info-box{
+    display: flex;
+    justify-content: space-between;
+    border: #999999 1rpx solid;
+    padding: 10rpx 0;
+}
+.info-key{}

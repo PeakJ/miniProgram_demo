@@ -1,0 +1,10 @@
+<!--pages/deviceInfo/deviceInfo.wxml-->
+<view class="outer-view">
+    <text>设备信息</text>
+    <block wx:for="{{deviceInfo}}" wx:for-index="key" wx:for-item="value" wx:key="index">
+        <view class="info-box">
+            <text class="info-key">{{key}}</text>
+            <text class="info-value">{{value}}</text>
+        </view>
+    </block>
+</view>
