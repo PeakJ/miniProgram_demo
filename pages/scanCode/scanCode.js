@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
 
     /**
@@ -31,6 +32,9 @@ Page({
                 wx.showToast({
                     title: error.errMsg
                 })
+            },
+            complete: params => {
+                console.log('complete:',params);
             }
         })
     }
