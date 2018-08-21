@@ -13,7 +13,22 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+/**
+ *获取URL指定KEY的值
+ * @param {string} url
+ * @param {string} key
+ */
+const getQueryString = (url,key) => {
+  var reg = new RegExp("(^|&)"+ key +"=([^&]*)(&|$)");
+  var paramStr = url.substr(url.indexOf('?')+1);
+  var r = paramStr.match(reg);
+  if(r!=null){
+      return  unescape(r[2]);
+  }
+  return null;
+}
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getQueryString
 }
