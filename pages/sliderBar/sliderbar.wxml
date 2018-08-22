@@ -1,5 +1,6 @@
 <!--pages/sliderBar/sliderbar.wxml-->
 <view class="outer">
+    <custom-navigator></custom-navigator>
     <view class="image-view">
         <image src="../../image/Google.png"></image>
     </view>
