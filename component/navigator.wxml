@@ -1,4 +1,11 @@
 <!--component/navigator.wxml-->
-<view>
-    <text>component/navigator.wxml</text>
+<view style="margin-bottom: 100rpx">
+    <view class="cus-nav">
+        <view class="nav-back" bindtap="onBack">返回</view>
+        <view class="nav-title">{{title}}</view>
+    </view>
+    <view class="slot-view">
+        <view class="outer-class">{{content}}</view>
+        <slot></slot>
+    </view>
 </view>

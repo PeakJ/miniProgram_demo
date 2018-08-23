@@ -1,1 +1,26 @@
-/* component/navigator.wxss */
+:host {
+    color: #66666;
+}
+.cus-nav{
+    height: 32px;
+    line-height: 32px;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+}
+.nav-back{
+    float: left;
+    width: 150rpx;
+    text-align: center;
+    margin-right: -150px;
+}
+.nav-title{
+    text-align: center;
+    width: 100%;
+}
+.slot-view{
+    color: red;
+    position: relative;
+    top: 100rpx;
+    left: 34rpx;
+}

@@ -2,23 +2,23 @@
 
 Page({
   data: {
-    menus:[
+    menus: [
       {
-        name:'轮播',
-        route:'/pages/banner/banner'
-      },{
-        name:'log',
-        route:'/pages/logs/logs'
-      },{
-        name:'滑动菜单',
-        route:'/pages/sliderBar/sliderbar'
+        name: '轮播',
+        route: '/pages/banner/banner'
+      }, {
+        name: 'log',
+        route: '/pages/logs/logs'
+      }, {
+        name: '滑动菜单',
+        route: '/pages/sliderBar/sliderBar'
       },
       {
-        name:'地图',
-        route:'/pages/map/map'
+        name: '地图',
+        route: '/pages/map/map'
       },
       {
-        name:'分享示例',
+        name: '分享示例',
         route: '/pages/share/share'
       },
       {
@@ -38,6 +38,6 @@ Page({
 
   },
   onLoad: function (option) {
-  
+
   }
 })

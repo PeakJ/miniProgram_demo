@@ -1,19 +1,24 @@
 {
 	"description": "项目配置文件。",
 	"packOptions": {
-		"ignore": [{
-          "type":"file",
-          "value":"README.md"
-        },{
-          "type": "folder",
-          "value":".idea"
-        },{
-          "type":"folder",
-          "value": "typings"
-        },{
-          "type": "file",
-          "value":".gitignore"
-        }]
+		"ignore": [
+			{
+				"type": "file",
+				"value": "README.md"
+			},
+			{
+				"type": "folder",
+				"value": ".idea"
+			},
+			{
+				"type": "folder",
+				"value": "typings"
+			},
+			{
+				"type": "file",
+				"value": ".gitignore"
+			}
+		]
 	},
 	"setting": {
 		"urlCheck": false,
@@ -24,7 +29,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.2",
+	"libVersion": "2.2.3",
 	"appid": "wx823d45d846ece4ff",
 	"projectname": "smallProject",
 	"isGameTourist": false,
@@ -51,8 +56,8 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "pages/deviceInfo/deviceInfo",
-					"query": "",
+					"pathName": "pages/sliderBar/sliderBar",
+					"query": "number=666",
 					"scene": "1001"
 				}
 			]

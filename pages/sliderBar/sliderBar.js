@@ -1,4 +1,3 @@
-// pages/sliderBar/sliderbar.js
 let itemWidth = null;//滚动选项宽度
 Page({
 
@@ -40,7 +39,7 @@ Page({
     const params = event.currentTarget.dataset;
     const tempMenu = [];
     this.data.sliderMenu.forEach((element, index) => {
-      element.textColor = params.item.value == index ? '#f00' : '#000';
+      element.textColor = params.item.value === index ? '#f00' : '#000';
       tempMenu.push(element);
     });
     const shouldScroll = event.currentTarget.offsetLeft - itemWidth;// 调整位置到中间位置
@@ -50,11 +49,18 @@ Page({
       scrollPosition: shouldScroll
     });
   },
-onReady:function(){
-  wx.createSelectorQuery().select('.slider-item').boundingClientRect(function(rect){
-   itemWidth = rect.width;
-  }).exec();
-},
+  onBack: function (event) {
+    console.log(event.detail);
+    wx.navigateBack({});
+  },
+  onLoad:function(options){
+    console.log('onLoad参数:',options);
+  },
+  onReady: function () {
+    wx.createSelectorQuery().select('.slider-item').boundingClientRect(function (rect) {
+      itemWidth = rect.width;
+    }).exec();
+  },
 
   /**
    * 生命周期函数--监听页面显示
