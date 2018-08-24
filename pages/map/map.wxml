@@ -7,5 +7,5 @@
     bindcontroltap="controlsClicked"
     bindregionchange="onRegionchange"
     />
-    <button bindtap="toCenter">test</button>
+    <button bindtap="toCenter">地图中心到当前位置</button>
 </view>

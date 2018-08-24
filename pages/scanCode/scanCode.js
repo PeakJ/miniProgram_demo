@@ -43,16 +43,17 @@ Page({
     const params = {
       's':'App.Hello.World',
       'app_key':'1F8068B3FCA0D9494BC4FB52F22F70C2',
-      'name': 'Yidao'
+      'name': 'Bryce'
     };
-    network.get('',params,'http://hb5.api.okayapi.com/')
+    network.get('',params,'https://hb5.api.okayapi.com/')
         .then(result => {
           console.log('success:',result);
           wx.showToast({
             title: result.data.data.title
           })
         },error => {
-          console.log('出错了：',error);
+          wx.showToast({title:error.errMsg});
         })
+
   }
 });

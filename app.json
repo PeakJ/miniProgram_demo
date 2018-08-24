@@ -10,7 +10,7 @@
     "pages/deviceInfo/deviceInfo"
   ],
   "window": {
-    "navigationBarTitleText": "Demo",
+    "navigationBarTitleText": "小功能",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff",
