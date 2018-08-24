@@ -1,0 +1,14 @@
+<view class="flex-style">
+    <button class="flex-item" bindtouchstart="goToCar">驾车</button>
+    <button class="flex-item" bindtouchstart="goToWalk">步行</button>
+    <button class="flex-item" bindtouchstart="goToBus">公交</button>
+    <button class="flex-item" bindtouchstart="goToRide">骑行</button>
+</view>
+<view class="map_box">
+    <map id="navi_map" longitude="116.451028" latitude="39.949643" scale="14" markers="{{markers}}" polyline="{{polyline}}"></map>
+</view>
+
+<view class="text_box">
+    <view class="text">{{distance}}</view>
+    <!--<view class="text">{{cost}}</view>-->
+</view>

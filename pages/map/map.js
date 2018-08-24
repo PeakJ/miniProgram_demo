@@ -9,7 +9,7 @@ Page({
     latitude:23.099994,
     longitude:113.324520,
     markers: [{
-      iconPath: "../../image/Google.png",
+      iconPath: "../../image/marker.jpg",
       id: 0,
       latitude: 23.099994,
       longitude: 113.324520,
@@ -29,7 +29,7 @@ Page({
       }
     },
     {
-      iconPath: "../../image/bloodEye.jpg",
+      iconPath: "../../image/marker.jpg",
       id: 1,
       latitude: 23.102524,
       longitude: 113.329530,

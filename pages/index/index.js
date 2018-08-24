@@ -28,6 +28,10 @@ Page({
       {
         name: '设备信息展示',
         route: '/pages/deviceInfo/deviceInfo'
+      },
+      {
+        name: '高德sdk',
+        route: '/pages/mapSDK/search/mapSearch'
       }
     ]
   },
