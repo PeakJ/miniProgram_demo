@@ -33,6 +33,9 @@ App({
       }
     })
   },
+  onError: error => {
+    console.log('全局错误：',error);
+  },
   globalData: {
     userInfo: null
   }
