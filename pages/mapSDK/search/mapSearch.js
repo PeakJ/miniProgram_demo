@@ -29,7 +29,7 @@ Page({
     const keywords = e.target.dataset.inputinfo.name;
     const location = e.target.dataset.inputinfo.location;
     const url = `../getPOI/getPOI?keywords=${keywords}&location=${location}`;
-    wx.redirectTo({
+    wx.navigateTo({
       url: url
     })
   }

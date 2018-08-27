@@ -69,11 +69,61 @@ Page({
     })
   },
   goToBus: function (e) {
-    const that = this;
+    myAmapFun.getTransitRoute({
+      origin: '116.481028,39.989643',
+      destination: '116.434446,39.90816',
+      strategy:3,
+      city: '北京',
+      success: function(data){
+        console.log(data);
+      },
+      fail: function(error){
+        console.log(error);
+      }
+    });
     console.log('公交');
   },
   goToRide: function (e) {
-    console.log('骑行');
+    const that = this;
+    myAmapFun.getRidingRoute({
+      origin: '116.481028,39.989643',
+      destination: '116.434446,39.90816',
+      success:function (data) {
+        const points = [];
+        if (data.paths && data.paths[0] && data.paths[0].steps) {
+          const steps = data.paths[0].steps;
+          for (let i = 0; i < steps.length; i++) {
+            const poLen = steps[i].polyline.split(';');
+            for (let j = 0; j < poLen.length; j++) {
+              points.push({
+                longitude: parseFloat(poLen[j].split(',')[0]),
+                latitude: parseFloat(poLen[j].split(',')[1])
+              })
+            }
+          }
+        }
+        that.setData({
+          polyline: [{
+            points: points,
+            color: "#0091ff",
+            width: 6
+          }]
+        });
+        if (data.paths[0] && data.paths[0].distance) {
+          that.setData({
+            distance: data.paths[0].distance + '米'
+          });
+        }
+        if (data.taxi_cost) {
+          that.setData({
+            cost: '打车约' + parseInt(data.taxi_cost) + '元'
+          });
+        }
+      },
+      fail: function (error) {
+        console.log(error);
+      }
+    });
   },
   goToWalk: function (e) {
     const that = this;

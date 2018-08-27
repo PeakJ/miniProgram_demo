@@ -42,17 +42,17 @@ Page({
       radius: 500,
       fillColor: '#000000AA'
     }],
-    controls: [{
-      id: 1,
-      iconPath: '../../image/bloodEye.jpg',
-      position: {
-        left: 50,
-        top: 50,
-        width: 50,
-        height: 50
-      },
-      clickable: true
-    }]
+    // controls: [{
+    //   id: 1,
+    //   iconPath: '../../image/bloodEye.jpg',
+    //   position: {
+    //     left: 50,
+    //     top: 50,
+    //     width: 50,
+    //     height: 50
+    //   },
+    //   clickable: true
+    // }]
   },
 
   /**
@@ -77,7 +77,7 @@ Page({
     mapCtx.moveToLocation();
   },
   onRegionchange: function(event){
-    
+    return;
     const that = this;
     mapCtx.getCenterLocation({
       success: function(result){
@@ -111,5 +111,10 @@ Page({
         console.log('fail:',error)
       }
     });
+  },
+  goToRoadPlan: function () {
+    wx.navigateTo({
+      url:'/pages/mapSDK/roadPlan/roadPlan'
+    })
   }
-})
+});
