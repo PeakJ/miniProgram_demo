@@ -19,16 +19,16 @@ const formatNumber = n => {
  * @param {string} key
  */
 const getQueryString = (url,key) => {
-  var reg = new RegExp("(^|&)"+ key +"=([^&]*)(&|$)");
-  var paramStr = url.substr(url.indexOf('?')+1);
-  var r = paramStr.match(reg);
+  const reg = new RegExp("(^|&)"+ key +"=([^&]*)(&|$)");
+  const paramStr = url.substr(url.indexOf('?')+1);
+  const r = paramStr.match(reg);
   if(r!=null){
       return  unescape(r[2]);
   }
   return null;
-}
+};
 
 module.exports = {
-  formatTime: formatTime,
+  formatTime,
   getQueryString
-}
+};

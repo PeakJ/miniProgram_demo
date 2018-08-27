@@ -1,4 +1,4 @@
-const app = getApp();
+const utils = require('../../utils/util.js');
 const network = require('../../utils/network.js');
 Page({
 
@@ -6,8 +6,15 @@ Page({
      * 页面的初始数据
      */
     data: {},
-    onLoad: () => {
-        console.log(app.globalData);
+    onLoad: (options) => {
+      const scene = decodeURIComponent(options.scene);
+      const driverId = utils.getQueryString(scene,'driverId');
+      if(driverId){
+        wx.showModal({
+          title:'您的ID',
+          content: driverId
+        });
+      }
     },
     scanCode: function () {
         wx.scanCode({
@@ -43,7 +50,7 @@ Page({
     const params = {
       's':'App.Hello.World',
       'app_key':'1F8068B3FCA0D9494BC4FB52F22F70C2',
-      'name': 'Bryce'
+      'name': '旅行者'
     };
     network.get('',params,'https://hb5.api.okayapi.com/')
         .then(result => {
