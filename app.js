@@ -2,16 +2,16 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    const logs = wx.getStorageSync('logs') || [];
+    logs.unshift(Date.now());
+    wx.setStorageSync('logs', logs);
 
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
-    })
+    });
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -31,12 +31,15 @@ App({
           })
         }
       }
-    })
+    });
   },
   onError: error => {
     console.log('全局错误：',error);
+    const logger = wx.getLogManager();
+    const time = new Date().toLocaleDateString();
+    logger.warn(error,time);
   },
   globalData: {
     userInfo: null
   }
-})
+});

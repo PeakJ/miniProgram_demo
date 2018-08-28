@@ -29,7 +29,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.3",
+	"libVersion": "2.2.4",
 	"appid": "wx823d45d846ece4ff",
 	"projectname": "smallProject",
 	"isGameTourist": false,
