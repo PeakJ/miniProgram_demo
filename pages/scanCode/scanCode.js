@@ -1,5 +1,5 @@
-const utils = require('../../utils/util.js');
-const network = require('../../utils/network.js');
+import {getQueryString} from '../../utils/util';
+import {get} from '../../utils/network';
 Page({
 
     /**
@@ -8,7 +8,7 @@ Page({
     data: {},
     onLoad: (options) => {
       const scene = decodeURIComponent(options.scene);
-      const driverId = utils.getQueryString(scene,'driverId');
+      const driverId = getQueryString(scene,'driverId');
       if(driverId){
         wx.showModal({
           title:'您的ID',
@@ -52,7 +52,7 @@ Page({
       'app_key':'1F8068B3FCA0D9494BC4FB52F22F70C2',
       'name': '旅行者'
     };
-    network.get('',params,'https://hb5.api.okayapi.com/')
+    get('',params,'https://hb5.api.okayapi.com/')
         .then(result => {
           console.log('success:',result);
           wx.showToast({

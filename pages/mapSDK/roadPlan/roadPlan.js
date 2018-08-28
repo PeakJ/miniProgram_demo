@@ -1,5 +1,5 @@
 const AMap = require('../../../libs/amap-wx.js');
-const CONSTANT = require('../../../utils/constant.js');
+import CONSTANT from '../../../utils/constant';
 let myAmapFun = new AMap.AMapWX({key: CONSTANT.AMP_KEY});
 Page({
   data: {
