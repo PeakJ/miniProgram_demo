@@ -10,7 +10,8 @@
     "pages/deviceInfo/deviceInfo",
     "pages/mapSDK/getPOI/getPOI",
     "pages/mapSDK/search/mapSearch",
-    "pages/mapSDK/roadPlan/roadPlan"
+    "pages/mapSDK/roadPlan/roadPlan",
+    "pages/formGroup/formGroup"
   ],
   "window": {
     "navigationBarTitleText": "小功能",

@@ -32,6 +32,10 @@ Page({
       {
         name: '高德sdk',
         route: '/pages/mapSDK/search/mapSearch'
+      },
+      {
+        name: '表单合集',
+        route: '/pages/formGroup/formGroup'
       }
     ]
   },
