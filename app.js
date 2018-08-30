@@ -35,6 +35,10 @@ App({
   },
   onError: error => {
     console.log('全局错误：',error);
+    wx.showModal({
+      title:'全局错误',
+      content: error
+    });
     const logger = wx.getLogManager();
     const time = new Date().toLocaleDateString();
     logger.warn(error,time);

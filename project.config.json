@@ -56,7 +56,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "pages/mapSDK/roadPlan/roadPlan",
+					"pathName": "pages/modalDialog/modalDialog",
 					"query": "number=666",
 					"scene": "1001"
 				}

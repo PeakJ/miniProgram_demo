@@ -36,6 +36,10 @@ Page({
       {
         name: '表单合集',
         route: '/pages/formGroup/formGroup'
+      },
+      {
+        name: '侧滑菜单',
+        route: '/pages/modalDialog/modalDialog'
       }
     ]
   },
