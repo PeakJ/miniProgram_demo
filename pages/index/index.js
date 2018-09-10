@@ -40,6 +40,10 @@ Page({
       {
         name: '侧滑菜单',
         route: '/pages/modalDialog/modalDialog'
+      },
+      {
+        name: '底部弹出框',
+        route: '/pages/bottomModal/bottomModal'
       }
     ]
   },

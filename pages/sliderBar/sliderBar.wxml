@@ -1,4 +1,4 @@
-<custom-navigator title="滑动菜单" bind:myBack="onBack" outer-class="inner-content">
+<custom-navigator title="滑动菜单" bind:myBack="onBack" data-test="hehe" outer-class="inner-content">
     <text>这里的内容是插入到组件的slot节点中的</text>
 </custom-navigator>
 <view>本页面最前面内容</view>

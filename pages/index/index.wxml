@@ -2,7 +2,7 @@
 <view class="container-outer">
   <view class="menu">
     <text>菜单</text>
-  </view>
+</view>
   <block wx:for="{{menus}}" wx:key="{{index}}">
     <navigator url="{{item.route}}" class="menu-item" 
     hover-stop-propagation="{{true}}" hover-class="none">

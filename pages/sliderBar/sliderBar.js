@@ -51,6 +51,7 @@ Page({
   },
   onBack: function (event) {
     console.log(event.detail);
+    console.log(event.currentTarget.dataset.test);
     wx.navigateBack({});
   },
   onLoad:function(options){

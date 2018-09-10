@@ -12,7 +12,8 @@
     "pages/mapSDK/search/mapSearch",
     "pages/mapSDK/roadPlan/roadPlan",
     "pages/formGroup/formGroup",
-    "pages/modalDialog/modalDialog"
+    "pages/modalDialog/modalDialog",
+    "pages/bottomModal/bottomModal"
   ],
   "window": {
     "navigationBarTitleText": "小功能",
