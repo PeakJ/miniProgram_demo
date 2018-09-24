@@ -1,3 +1,5 @@
+<navigation-bar bind:back="onnavback" enable="{{true}}" show-loading="{{loading}}" title="{{title}}" ></navigation-bar> 
+
 <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
     <view class="modals-cancel" bindtap="hideModal"></view>
     <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}"></view>
@@ -7,4 +9,3 @@
 <image src="https://jiema.wwei.cn/static/images/jiema.jpg" style="width:100px;height:100px;"></image>
 <button type="primary" bind:tap="previewImage">预览图片</button>
 </view>
-<web-view src="https://jiema.wwei.cn/static/images/jiema.jpg"></web-view>

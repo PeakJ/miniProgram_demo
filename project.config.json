@@ -29,7 +29,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.4",
+	"libVersion": "2.3.0",
 	"appid": "wx823d45d846ece4ff",
 	"projectname": "smallProject",
 	"isGameTourist": false,
@@ -56,7 +56,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "pages/modalDialog/modalDialog",
+					"pathName": "pages/bottomModal/bottomModal",
 					"query": "number=666",
 					"scene": "1001"
 				}

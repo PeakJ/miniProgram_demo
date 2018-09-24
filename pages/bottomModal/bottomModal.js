@@ -54,5 +54,8 @@ Page({
     wx.previewImage({
       urls: ['https://jiema.wwei.cn/static/images/jiema.jpg'] // 需要预览的图片http链接列表
     })
+  },
+  onnavback: function () {
+    console.log(666);
   }
 })

@@ -20,11 +20,11 @@
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff",
-    "navigationStyle": "default"
+    "navigationStyle": "custom"
   },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": false
+  "debug": true
 }
