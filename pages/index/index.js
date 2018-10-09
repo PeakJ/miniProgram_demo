@@ -6,10 +6,8 @@ Page({
       {
         name: '轮播',
         route: '/pages/banner/banner'
-      }, {
-        name: 'log',
-        route: '/pages/logs/logs'
-      }, {
+      }, 
+      {
         name: '滑动菜单',
         route: '/pages/sliderBar/sliderBar'
       },
@@ -42,9 +40,16 @@ Page({
         route: '/pages/modalDialog/modalDialog'
       },
       {
-        name: '底部弹出框',
+        name: '图片预览',
         route: '/pages/bottomModal/bottomModal'
-      }
+      },
+      {
+        name: '分包页面',
+        route: '/subPackageOne/pages/test/test'
+      },{
+        name: 'log',
+        route: '/pages/logs/logs'
+      },
     ]
   },
   onReady: () => {

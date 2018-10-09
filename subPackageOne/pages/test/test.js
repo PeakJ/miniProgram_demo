@@ -1,4 +1,4 @@
-// pages/modalDialog.js
+// subPackageOne/pages/test.js
 Page({
 
   /**

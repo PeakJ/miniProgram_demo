@@ -15,12 +15,20 @@
     "pages/modalDialog/modalDialog",
     "pages/bottomModal/bottomModal"
   ],
+  "subPackages": [
+    {
+      "root": "subPackageOne",
+      "pages": [
+        "pages/test/test"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTitleText": "小功能",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff",
-    "navigationStyle": "custom"
+    "navigationStyle": "default"
   },
   "networkTimeout": {
     "request": 10000,
