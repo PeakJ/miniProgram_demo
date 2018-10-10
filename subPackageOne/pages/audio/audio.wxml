@@ -1,3 +1,4 @@
 <view class="container">
-    <button bind:touchstart="onTouchstart" bind:touchend="onTouchend" bind:touchmove="onTouchmove">{{buttonText}}</button>
+    <button class="record" bind:touchstart="onTouchstart" bind:touchend="onTouchend" bind:touchmove="onTouchmove">{{buttonText}}</button>
+    <button bind:tap="play">播放刚才的录音</button>
 </view>

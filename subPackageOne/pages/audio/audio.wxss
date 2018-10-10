@@ -1,4 +1,4 @@
-button{
+.record{
     width:80%;
     position: fixed;
     bottom: 40rpx;
