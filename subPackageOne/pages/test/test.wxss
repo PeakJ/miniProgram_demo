@@ -1,1 +1,17 @@
-/* subPackageOne/pages/test.wxss */
+.container-outer{
+    padding: 40rpx 17rpx;
+  }
+  .menu{
+    text-align: center;
+  }
+  .menu-item{
+    border-bottom: 1rpx #333 solid;
+    padding: 5rpx 0;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .name-text{
+    font-size: 25rpx;
+  }

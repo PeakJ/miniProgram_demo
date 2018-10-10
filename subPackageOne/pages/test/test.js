@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    menus:[{
+      name: '音频相关',
+      route: '/subPackageOne/pages/audio/audio'
+    }]
   },
 
   /**

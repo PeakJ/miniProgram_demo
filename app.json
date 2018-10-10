@@ -19,7 +19,8 @@
     {
       "root": "subPackageOne",
       "pages": [
-        "pages/test/test"
+        "pages/test/test",
+        "pages/audio/audio"
       ]
     }
   ],

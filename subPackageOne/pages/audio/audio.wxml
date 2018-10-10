@@ -1,0 +1,3 @@
+<view class="container">
+    <button bind:touchstart="onTouchstart" bind:touchend="onTouchend" bind:touchmove="onTouchmove">{{buttonText}}</button>
+</view>
