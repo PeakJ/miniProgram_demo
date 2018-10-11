@@ -1,66 +1,106 @@
 const recorderManager = wx.getRecorderManager();
-const innerAudioContext = wx.createInnerAudioContext();
+let innerAudioContext = wx.createInnerAudioContext();
 let audioUrl = '';  //待播放的url
 let touchPosition = null;  //滑动位置
+let canPlay = false;
 Page({
-  data:{
+  data: {
     buttonText: '按住 说话'
   },
-  onLoad:function (options) {
-    console.log(innerAudioContext)
+  onLoad: function (options) {
+    canPlay = false;
+    wx.getAvailableAudioSources({
+      success:(res) => console.log(res.audioSources),
+      fail: error => console.log(error)
+    })
   },
-  onTouchstart:function(res){
+  onUnload: function () {
+    // innerAudioContext.offPlay();
+    // innerAudioContext.offEnded();
+    // innerAudioContext.offError();
+    // innerAudioContext.destroy();
+  },
+  onTouchstart: function (res) {
     this.setData({
       buttonText: '松开 结束'
     });
+    wx.showToast({
+      title: '手指上滑，取消',
+      duration: 900000
+    })
     touchPosition = res.touches[0].pageY
-    recorderManager.start({
+    const option = {
       duration: 10000,
       sampleRate: 44100,
       numberOfChannels: 1,
       encodeBitRate: 192000,
       format: 'aac',
       frameSize: 50
-    });
+    };
+    recorderManager.start(option);
+    canPlay = true;
   },
-  onTouchend:function(){
+  onTouchend: function () {
     this.setData({
       buttonText: '按住 说话'
     });
     recorderManager.stop();
+    wx.hideToast();
   },
-  onTouchmove:function (res) {
-    if(touchPosition-res.touches[0].pageY>70){
+  onTouchmove: function (res) {
+    if (touchPosition - res.touches[0].pageY > 70) {
       this.setData({
         buttonText: '松开 取消'
-      })
-    }else{
+      });
+      wx.showToast({
+        title: '松开手指，取消',
+        duration: 900000
+      });
+      canPlay = false;
+    } else {
       this.setData({
         buttonText: '松开 结束'
-      })
+      });
+      wx.showToast({
+        title: '手指上滑，取消',
+        duration: 900000
+      });
+      canPlay = true;
     }
   },
-  play:function(){
+  play: function () {
     innerAudioContext.src = audioUrl;
+    console.log('innerAudioContext:',innerAudioContext)
+    innerAudioContext.obeyMuteSwitch = false;
+    innerAudioContext.volume = 1;
     innerAudioContext.play();
   }
 })
 recorderManager.onStart(() => {
   console.log('录音开始')
 });
-recorderManager.onStop(res =>{
-  console.log('path:',res.tempFilePath);
+recorderManager.onStop(res => {
+  if (!canPlay) return;
   audioUrl = res.tempFilePath;
 });
 innerAudioContext.onPlay(() => {
-  console.log('play')
+  wx.showToast({
+    title: '播放中。。。',
+    duration: 999999,
+    icon: 'none'
+  })
+});
+innerAudioContext.onEnded(() => {
+  wx.hideToast();
 });
 innerAudioContext.onError(res => {
-  console.log('errorCode:',res.errCode);
-  if(!res.errCode){
+  if (!res.errCode) {
     wx.showToast({
-      title:'请先录音',
+      title: '未找到播放内容',
       icon: 'none'
     })
+  }else{
+    wx.hideToast();
   }
+  console.log('errorCode:', res.errCode);
 })
