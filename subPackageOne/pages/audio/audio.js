@@ -1,8 +1,18 @@
+
+import { Base64 } from '../../../libs/base64.js';
 const recorderManager = wx.getRecorderManager();
 let innerAudioContext = wx.createInnerAudioContext();
 let audioUrl = '';  //待播放的url
 let touchPosition = null;  //滑动位置
 let canPlay = false;
+
+console.log(Base64.encode('大佬请喝阔乐'));   // 5aSn5L2s6K+35Zad6ZiU5LmQ
+console.log(Base64.encodeURI('https://jiema.wwei.cn/static/images/jiema.jpg')); //aHR0cHM6Ly9qaWVtYS53d2VpLmNuL3N0YXRpYy9pbWFnZXMvamllbWEuanBn
+
+console.log(Base64.decode('5aSn5L2s6K+35Zad6ZiU5LmQ'));  // 大佬请喝阔乐
+// note .decodeURI() is unnecessary since it accepts both flavors
+console.log(Base64.decode('aHR0cHM6Ly9qaWVtYS53d2VpLmNuL3N0YXRpYy9pbWFnZXMvamllbWEuanBn'));  // https://jiema.wwei.cn/static/images/jiema.jpg
+
 Page({
   data: {
     buttonText: '按住 说话'
