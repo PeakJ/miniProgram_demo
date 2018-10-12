@@ -1,0 +1,17 @@
+<custom-navigator title="滑动菜单" bind:myBack="onBack" data-test="hehe" outer-class="inner-content">
+    <text>这里的内容是插入到组件的slot节点中的</text>
+</custom-navigator>
+<view>本页面最前面内容</view>
+<view class="outer">
+    <view class="image-view">
+        <image src="../../images/Google.png"></image>
+    </view>
+    <scroll-view class="scroll-view-c" scroll-x scroll-left="{{scrollPosition}}" scroll-with-animation>
+        <view class="slider-item" wx:for="{{sliderMenu}}" wx:key="{{item.value}}" id="{{item.text}}"
+              data-item="{{item}}" bindtap="itemClick"
+              style="color:{{item.textColor}};">{{item.text}}</view>
+    </scroll-view>
+    <view class="image-view">
+        <image src="../../images/bloodEye.jpg"></image>
+    </view>
+</view>

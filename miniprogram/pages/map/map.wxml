@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="map-box">
+        <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}"
+             show-location
+             markers="{{markers}}"
+             circles="{{circles}}"
+             controls="{{controls}}"
+             bindcontroltap="controlsClicked"
+             bindregionchange="onRegionchange"
+        />
+        <cover-view>
+            <cover-image src="../../images/map_center.jpg" style="width:20px;height: 20px;"></cover-image>
+        </cover-view>
+    </view>
+    <button bindtap="toCenter">定位当前位置</button>
+    <button bindtap="goToRoadPlan">简单路线规划</button>
+</view>
