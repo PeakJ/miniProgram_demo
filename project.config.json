@@ -58,7 +58,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "subPackageOne/pages/audio/audio",
+					"pathName": "subPackageOne/pages/swipeout/index",
 					"query": "number=666",
 					"scene": "1001"
 				}

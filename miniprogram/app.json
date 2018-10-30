@@ -27,7 +27,8 @@
         "pages/deployFunctions/deployFunctions",
         "pages/chooseLib/chooseLib",
         "pages/test/test",
-        "pages/audio/audio"
+        "pages/audio/audio",
+        "pages/swipeout/index"
       ]
     }
   ],
