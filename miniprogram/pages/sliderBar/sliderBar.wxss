@@ -21,7 +21,7 @@ image{
 .outer{
     display: flex;
     width: 100%;
-    padding: 300rpx 0;
+    padding: 300rpx 0 0 0;
     justify-content: space-around;
     align-items: center;
 }

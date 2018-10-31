@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "Swipeout 滑动菜单",
+  "navigationBarTitleText": "Swipeout 滑动按钮",
   "usingComponents": {
     "i-swipeout": "../../../dist/swipeout/index",
     "i-cell-group": "../../../dist/cell-group/index",

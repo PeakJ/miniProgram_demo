@@ -7,10 +7,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    motto: 'hello world',
+    motto: '无毒无害',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    imageData: [
+      { url: '../../images/1.jpg' },
+      { url: '../../images/2.jpg' },
+      { url: '../../images/3.jpg' },
+      { url: '../../images/4.jpg' },
+      { url: '../../images/5.jpg' },
+      { url: '../../images/6.jpg' },
+    ]
   },
   //事件处理函数
   bindViewTap: function () {
@@ -34,7 +42,7 @@ Page({
       app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
-          hasUserInfo: true, 
+          hasUserInfo: true,
           myRouter: this.route
         })
       }
@@ -61,10 +69,10 @@ Page({
       frontColor: '#ffffff',
       backgroundColor: '#ff0000',
       animation: {
-          duration: 400,
-          timingFunc: 'easeIn'
+        duration: 400,
+        timingFunc: 'easeIn'
       }
-  })
+    })
   },
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo

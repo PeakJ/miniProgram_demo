@@ -52,7 +52,7 @@ Page({
   },
   previewImage: function(){
     wx.previewImage({
-      urls: ['https://img.zcool.cn/community/011b755568aad100000127164de879.jpg@2o.jpg'] // 需要预览的图片http链接列表
+      urls: ['cloud://test-3b26eb.7465-test-3b26eb/1540980337.png'] // 需要预览的图片http链接列表
     })
   },
   onnavback: function () {

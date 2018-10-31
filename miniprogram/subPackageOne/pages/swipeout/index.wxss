@@ -1,3 +1,16 @@
+.cus-progress{
+    display: flex;
+}
+.cus-progress view{
+    margin: 0 20rpx;
+}
+progress{
+    flex: 1
+}
+.swi-content{
+    height: 80rpx;
+}
+
 .i-swipeout-demo-item{
     border-bottom:#333 solid 1px;
 }

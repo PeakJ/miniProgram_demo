@@ -17,16 +17,9 @@
     </view>
     <swiper indicator-dots="{{true}}" indicator-active-color="#F00" 
     previous-margin="10px" next-margin="10px" style="width:100%"
-    autoplay current="1" interval="2500" circular
-    >
-        <swiper-item>
-            <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" style="width:350px;height:150px;" />
-        </swiper-item>
-        <swiper-item>
-            <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" style="width:350px;height:150px;" />
-        </swiper-item>
-         <swiper-item>
-            <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" style="width:350px;height:150px;" />
+    autoplay current="1" interval="2500" circular>
+        <swiper-item wx:for="{{imageData}}" wx:key="index">
+            <image src="{{item.url}}" style="width:384px;height:216px;" />
         </swiper-item>
     </swiper>
     <!-- <script src="https://gist.github.com/PeakJ/21a47bf2a804d8bb77ca55fa9071d9fa.js"></script> -->

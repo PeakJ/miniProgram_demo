@@ -4,11 +4,27 @@ Page({
   data: {
     menus: [
       {
+        name: '分包云函数',
+        route: '/subPackageOne/pages/index/index'
+      },
+      {
+        name: '高德sdk',
+        route: '/pages/mapSDK/search/mapSearch'
+      },
+      {
+        name: '录音播放',
+        route: '/subPackageOne/pages/audio/audio'
+      },
+      {
+        name: '设备信息展示',
+        route: '/pages/deviceInfo/deviceInfo'
+      },
+      {
         name: '轮播',
-        route: '/pages/banner/banner'
+        route: '/subPackageOne/pages/banner/banner'
       }, 
       {
-        name: '滑动菜单',
+        name: '丑死了的slideBar',
         route: '/pages/sliderBar/sliderBar'
       },
       {
@@ -24,19 +40,11 @@ Page({
         route: '/pages/scanCode/scanCode'
       },
       {
-        name: '设备信息展示',
-        route: '/pages/deviceInfo/deviceInfo'
-      },
-      {
-        name: '高德sdk',
-        route: '/pages/mapSDK/search/mapSearch'
-      },
-      {
         name: '表单合集',
         route: '/pages/formGroup/formGroup'
       },
       {
-        name: '侧滑菜单',
+        name: '侧滑modal',
         route: '/pages/modalDialog/modalDialog'
       },
       {
@@ -44,15 +52,12 @@ Page({
         route: '/pages/bottomModal/bottomModal'
       },
       {
-        name: '分包云函数',
-        route: '/subPackageOne/pages/index/index'
-      },{
-        name: 'log',
-        route: '/pages/logs/logs'
+        name: '滑动按钮',
+        route: '/subPackageOne/pages/swipeout/index'
       },
-      {
-        name: '音频相关',
-        route: '/subPackageOne/pages/audio/audio'
+     {
+        name: '更新日志',
+        route: '/pages/logs/logs'
       },
     ]
   },

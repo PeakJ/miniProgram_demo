@@ -1,18 +1,19 @@
-const { $Message } = require('../../../dist/base/index');
-
+let timerId = '';
 Page({
     data : {
-        visible2: false,
-        //小程序没有refs，所以只能用动态布尔值控制关闭
-        toggle : false,
-        toggle2 : false,
-        actions2: [
-            {
-                name: '删除',
-                color: '#ed3f14'
-            }
-        ],
+        percent: 0,
+        timeLength:0,//进度条时长
+        swipeoutToggle : false,
         actions : [
+            {
+                name : '选TA',
+                color : '#fff',
+                fontsize : '20',
+                width : 100,
+                background : '#ff0000'
+            },
+        ],
+        actions2 : [
             {
                 name : '喜欢',
                 color : '#fff',
@@ -30,38 +31,30 @@ Page({
             }
         ]
     },
-    handleCancel2 () {
-        this.setData({
-            visible2: false,
-            toggle : this.data.toggle ? false : true
-        });
+    onShow:function(){
+        const vm = this;
+        const sumLength = 10;
+        timerId = setInterval(() => {
+            if(vm.data.timeLength>=sumLength){
+                clearInterval(timerId);
+            }else{
+                vm.setData({
+                    percent:vm.data.percent + 100/sumLength,
+                    timeLength:vm.data.timeLength + 1
+                })
+            } 
+        },1000)
     },
-    handleClickItem2 () {
-        const action = [...this.data.actions2];
-        action[0].loading = true;
-
-        this.setData({
-            actions2: action
-        });
-
-        setTimeout(() => {
-            action[0].loading = false;
-            this.setData({
-                visible2: false,
-                actions2: action,
-                toggle: this.data.toggle ? false : true
-            });
-            
-        }, 2000);
+    onUnload:function(){
+        clearInterval(timerId);
     },
-    handlerCloseButton(){
-        this.setData({
-            toggle2: this.data.toggle2 ? false : true
-        });
+    swipeoutClickd:function(event){
+        console.log('点击了',event);
     },
-    actionsTap(){
-        this.setData({
-            visible2: true
-        });
+    testCatch(){
+        console.log('阻止冒泡')
+    },
+    testCapture(){
+        console.log('监听捕获')
     }
 });

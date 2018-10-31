@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/banner/banner",
     "pages/sliderBar/sliderBar",
     "pages/map/map",
     "pages/share/share",
@@ -20,6 +19,7 @@
       "root": "subPackageOne",
       "pages": [
         "pages/index/index",
+        "pages/banner/banner",
         "pages/userConsole/userConsole",
         "pages/storageConsole/storageConsole",
         "pages/databaseGuide/databaseGuide",

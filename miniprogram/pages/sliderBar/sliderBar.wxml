@@ -1,7 +1,8 @@
 <custom-navigator title="滑动菜单" bind:myBack="onBack" data-test="hehe" outer-class="inner-content">
     <text>这里的内容是插入到组件的slot节点中的</text>
 </custom-navigator>
-<view>本页面最前面内容</view>
+<text style="margin-left:40rpx;">本页面最前面内容</text>
+
 <view class="outer">
     <view class="image-view">
         <image src="../../images/Google.png"></image>
@@ -15,3 +16,4 @@
         <image src="../../images/bloodEye.jpg"></image>
     </view>
 </view>
+<text style="margin-left:20rpx;">就是这个丑东西，凑合用吧</text>
