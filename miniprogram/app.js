@@ -1,5 +1,5 @@
 //app.js
-
+import {priceConfigData} from './common/data.js';
 App({
   onLaunch: function () {
     if (!wx.cloud) {
@@ -8,7 +8,14 @@ App({
       wx.cloud.init({
         traceUser: true,
       })
-    }
+    };
+    // for(let i=0;i<30;i++){
+    //   wx.setStorage({
+    //     key:'testData'+ i,
+    //     data:priceConfigData
+    //   })
+    // }
+    
   },
   onError: error => {
     wx.showModal({

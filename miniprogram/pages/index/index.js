@@ -68,6 +68,13 @@ Page({
 
   },
   onLoad: function (option) {
-
+    try {
+      const res = wx.getStorageInfoSync()
+      console.log('keys:',res.keys);
+      console.log('currentSize:',res.currentSize);
+      console.log('limitSize:',res.limitSize)
+    } catch (e) {
+      console.error(e);
+    }
   }
 })
