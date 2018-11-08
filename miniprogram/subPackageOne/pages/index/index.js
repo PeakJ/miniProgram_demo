@@ -3,7 +3,7 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: './user-unlogin.png',
+    avatarUrl: 'https://7465-test-3b26eb-1257805982.tcb.qcloud.la/user-unlogin.png?sign=93a6002a2df1cb86265b8a0691a167f5&t=1541673411',
     userInfo: {},
     logged: false,
     takeSession: false,
@@ -16,8 +16,10 @@ Page({
         url: '../chooseLib/chooseLib',
       })
       return
-    }
-
+    };
+    this.setData({
+      avatarUrl:app.globalData.userImg
+    })
   },
 
   onGetUserInfo: function(e) {
@@ -26,7 +28,8 @@ Page({
         logged: true,
         avatarUrl: e.detail.userInfo.avatarUrl,
         userInfo: e.detail.userInfo
-      })
+      });
+      app.globalData.userImg = e.detail.userInfo.avatarUrl;
     }
   },
 

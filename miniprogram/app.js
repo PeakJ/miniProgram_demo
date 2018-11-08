@@ -21,6 +21,7 @@ App({
     logger.warn(error,time);
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    userImg: 'https://7465-test-3b26eb-1257805982.tcb.qcloud.la/user-unlogin.png?sign=93a6002a2df1cb86265b8a0691a167f5&t=1541673411',
   }
 });
