@@ -14,6 +14,10 @@ Page({
   onLoad: function () {
     this.setData({
       savedFilePath:wx.getStorageSync('savedFilePath')
+    });
+    wx.cloud.init({
+      env:'test-3b26eb',
+      traceUser: true,
     })
   },
   start: function () {
@@ -32,7 +36,11 @@ Page({
           fileID: fileId, // 文件 ID
           success: res => {
             // 返回临时文件路径
-            vm.saveFile(res.tempFilePath, this.data.savedFilePath);
+            wx.showToast({
+              title: '下载完成',
+              icon: 'none'
+            })
+            vm.saveFile(res.tempFilePath);
           },
           fail: console.error
         })
@@ -40,11 +48,10 @@ Page({
     })
 
   },
-  saveFile: function (tempFilePath, filePath) {
+  saveFile: function (tempFilePath) {
     const vm = this;
     vm.fileSystemManager.saveFile({
       tempFilePath: tempFilePath,
-      filePath: filePath,
       success: res => {
         console.log('savedFilePath:',res.savedFilePath);
         vm.setData({
@@ -63,17 +70,19 @@ Page({
         vm.fileSystemManager.readFile({
           filePath:vm.data.savedFilePath,
           success:res => {
-            console.log(res.data);
-            wx.request({
-              url:vm.data.savedFilePath,
-              success:res => {
-                const arrBuff = res.data;
-                wx.setStorageSync('bigData',arrBuff);
-                vm.setData({
-                  isShow:true
-                })
-              }
-            })
+            vm.setData({
+                    isShow:true
+                  })
+            // wx.request({  //ios真机支持这种方式读取本地文件，会提示fail invalid url
+            //   url:vm.data.savedFilePath,
+            //   success:res => {
+            //     const arrBuff = res.data;
+            //     wx.setStorageSync('bigData',arrBuff);
+            //     vm.setData({
+            //       isShow:true
+            //     })
+            //   }
+            // })
           },
           fail:error => {
             console.log(error);

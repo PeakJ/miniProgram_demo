@@ -16,6 +16,11 @@ Page({
         url: '../chooseLib/chooseLib',
       })
       return
+    } else {
+      wx.cloud.init({
+        env:'test-3b26eb',
+        traceUser: true,
+      })
     };
     this.setData({
       avatarUrl:app.globalData.userImg
