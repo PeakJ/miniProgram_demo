@@ -1,20 +1,14 @@
-//app.js
-import {priceConfigData} from './common/data.js';
+//app.j
 App({
   onLaunch: function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
       wx.cloud.init({
+        env:'test-3b26eb',
         traceUser: true,
       })
     };
-    // for(let i=0;i<30;i++){
-    //   wx.setStorage({
-    //     key:'testData'+ i,
-    //     data:priceConfigData
-    //   })
-    // }
     
   },
   onError: error => {

@@ -1,0 +1,5 @@
+<view>
+<button type="primary" bind:tap="start">下载并存储</button>
+<button type="primary" bind:tap="readFile">读取文件</button>
+<view class="tips" wx:if="{{isShow}}">读取成功的文件路径：{{savedFilePath}}</view>
+</view>

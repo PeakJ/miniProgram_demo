@@ -56,6 +56,10 @@ Page({
         route: '/subPackageOne/pages/swipeout/index'
       },
      {
+        name: '文件下载存储读取',
+        route: '/subPackageOne/pages/fileSystem/fileSystem'
+      },
+      {
         name: '更新日志',
         route: '/pages/logs/logs'
       },
@@ -75,6 +79,11 @@ Page({
       console.log('limitSize:',res.limitSize)
     } catch (e) {
       console.error(e);
-    }
+    };
+    wx.getSavedFileList({
+      success (res) {
+        console.log('saveList:',res.fileList)
+      }
+    })
   }
 })

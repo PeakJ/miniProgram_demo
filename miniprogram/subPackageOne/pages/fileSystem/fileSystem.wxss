@@ -1,0 +1,7 @@
+button{
+    margin: 5rpx 0;
+}
+.tips{
+    width: 90%;
+    overflow: hidden;
+}
