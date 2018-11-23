@@ -18,9 +18,9 @@ Page({
      */
     onShareAppMessage: function () {
         return {
-            title: '测试小程序分享',
+            title: '送你一本绝世秘籍',
             imageUrl: '../../images/Google.png',
-            path: '/pages/banner/banner'
+            path: '/pages/share/share'
         }
     },
     showShareMenu: function () {
