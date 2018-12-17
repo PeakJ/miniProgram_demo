@@ -29,7 +29,8 @@
         "pages/test/test",
         "pages/audio/audio",
         "pages/swipeout/index",
-        "pages/fileSystem/fileSystem"
+        "pages/fileSystem/fileSystem",
+        "pages/controlDevice/controlDevice"
       ]
     }
   ],

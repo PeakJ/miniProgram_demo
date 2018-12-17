@@ -20,6 +20,10 @@ Page({
         route: '/pages/deviceInfo/deviceInfo'
       },
       {
+        name: '控制设备',
+        route: '/subPackageOne/pages/controlDevice/controlDevice'
+      },
+      {
         name: '轮播',
         route: '/subPackageOne/pages/banner/banner'
       }, 
