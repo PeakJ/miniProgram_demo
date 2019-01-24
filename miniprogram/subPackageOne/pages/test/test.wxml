@@ -1,13 +1,6 @@
 <!-- index.wxml -->
 <view class="container-outer">
-  <view class="menu">
-    <text>神秘之门</text>
-</view>
-  <block wx:for="{{menus}}" wx:key="{{index}}">
-    <navigator url="{{item.route}}" class="menu-item" 
-    hover-stop-propagation="{{true}}" hover-class="none">
-      <text class="name-text">{{item.name}}</text>
-      <icon type="download" size="16" color="green" class="icon"></icon>
-    </navigator>
-  </block>
+ <view class="progress" style="width:{{width}}rpx;" animation="{{animationMeta}}"></view>
+ <view>{{timeLength}}</view>
+ <view>{{width}}</view>
 </view>

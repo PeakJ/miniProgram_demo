@@ -29,6 +29,7 @@
 		"minified": true,
 		"newFeature": true,
 		"nodeModules": true,
+		"autoAudits": false,
 		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
@@ -59,7 +60,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "subPackageOne/pages/controlDevice/controlDevice",
+					"pathName": "subPackageOne/pages/test/test",
 					"query": "number=666",
 					"scene": "1001"
 				}

@@ -1,69 +1,45 @@
 // subPackageOne/pages/test.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    menus:[{
-      name: '音频相关',
-      route: '/subPackageOne/pages/audio/audio'
-    }]
+    width: 716,
+    animationMeta:{},
+    timeLength: 50
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(){
+    this.timeCount();
+    this.startAmimation();
+    console.log('开始了')
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onHide(){
+    this.animation.export();
+    this.setData({animationMeta:{}});
+    console.log('隐藏了')
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onShow () {
+    const currentValue = this.data.timeLength;
+    this.setData({width: parseInt(currentValue*716/50)});
+    wx.nextTick(() => this.startAmimation());
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  startAmimation(){
+    const animation = wx.createAnimation({
+      duration: this.data.timeLength*1000,
+      timingFunction: 'linear'
+    });
+    this.animation = animation;
+    animation.width(0).step();
+    this.setData({
+      animationMeta:animation.export()
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  timeCount(){
+    this.timeId = setInterval( ()=>{
+      if(this.data.timeLength>0){
+        this.setData({
+          timeLength: this.data.timeLength-1
+        });
+      } else{
+        clearInterval(this.timeId);
+      } 
+    },1000)
   }
 })
