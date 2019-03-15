@@ -5,5 +5,5 @@
 <view>改变屏幕亮度</view>
 <slider min="0" max="100" step="1" value="{{screenBrightness}}" show-value="true" bindchanging="setBrightness" style="width:80%"></slider>
 <button type="primary" bindtap="shortVibrate">短振动</button>
-<button type="primary" bindtap="longVibrate">长振动</button>
+<button type="primary" bindtap="longVibrate" class="margin-top-10">长振动</button>
 </view>

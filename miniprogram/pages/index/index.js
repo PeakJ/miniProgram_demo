@@ -44,6 +44,10 @@ Page({
         route: '/pages/scanCode/scanCode'
       },
       {
+        name: '拍照功能',
+        route: '/subPackageOne/pages/takePhoto/takePhoto'
+      },
+      {
         name: '表单合集',
         route: '/pages/formGroup/formGroup'
       },

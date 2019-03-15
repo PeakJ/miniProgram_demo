@@ -33,7 +33,7 @@
 		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.0",
+	"libVersion": "2.6.2",
 	"appid": "wx823d45d846ece4ff",
 	"projectname": "smallProject",
 	"isGameTourist": false,
@@ -60,9 +60,9 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "subPackageOne/pages/test/test",
+					"pathName": "subPackageOne/pages/controlDevice/controlDevice",
 					"query": "number=666",
-					"scene": "1001"
+					"scene": 1001
 				}
 			]
 		}

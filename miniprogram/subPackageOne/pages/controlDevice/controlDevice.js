@@ -45,6 +45,5 @@ Page({
       success: data => console.log(data),
       fail: error => console.log(error)
     })
-  }
-  
+  },
 })
