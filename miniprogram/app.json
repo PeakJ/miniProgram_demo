@@ -17,6 +17,7 @@
   "subPackages": [
     {
       "root": "subPackageOne",
+      "name": "subPackageOne",
       "pages": [
         "pages/index/index",
         "pages/banner/banner",
@@ -32,20 +33,50 @@
         "pages/fileSystem/fileSystem",
         "pages/controlDevice/controlDevice",
         "pages/takePhoto/takePhoto"
-      ]
+      ],
+      "independent":false
     }
   ],
+  "preloadRule":{
+    "pages/index/index":{
+      "packages": ["subPackageOne"],
+      "network": "all"
+    },
+    "pages/logs/logs":{
+      "packages": ["subPackageOne"],
+      "network": "all"
+    }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ],
+    "color": "#ffffff",
+    "selectedColor": "#ffe901",
+    "backgroundColor": "#07b195",
+    "position": "bottom"
+  },
   "window": {
     "navigationBarTitleText": "小功能",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff",
-    "navigationStyle": "default"
+    "navigationStyle": "default",
+    "pageOrientation": "auto"
   },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
   },
+  "functionalPages": true,
+  "resizable": true,
   "debug": false,
   "cloud": true
 }

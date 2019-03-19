@@ -20,10 +20,18 @@ Page({
       '还有一像素边框，小程序base64处理',
       '云函数下载问文件，存储到本地',
       '增加调用部分设备api功能',
-      '增加调用前置摄像头拍照功能'
+      '增加调用前置摄像头拍照功能',
+      '增加小程序内关注关联公众号功能',
+      '首页增加tabBar,分包预加载'
     ]
   },
   onLoad: function () {
   
+  },
+  onOfficialLoad(detail){
+    console.log(detail)
+  },
+  onOfficialError(detail){
+    console.log(detail)
   }
 })

@@ -66,11 +66,7 @@ Page({
      {
         name: '文件下载存储读取',
         route: '/subPackageOne/pages/fileSystem/fileSystem'
-      },
-      {
-        name: '更新日志',
-        route: '/pages/logs/logs'
-      },
+      }
     ]
   },
   onReady: () => {

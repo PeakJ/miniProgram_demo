@@ -60,7 +60,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "subPackageOne/pages/controlDevice/controlDevice",
+					"pathName": "pages/logs/logs",
 					"query": "number=666",
 					"scene": 1001
 				}
