@@ -71,7 +71,7 @@ Page({
   onReady: () => {
     wx.setTabBarBadge({
       index:1,
-      text:'19'
+      text:'20'
     })
   },
   onShow: function (option) {
