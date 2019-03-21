@@ -60,7 +60,7 @@
 				{
 					"id": 0,
 					"name": "单页编译模式",
-					"pathName": "pages/logs/logs",
+					"pathName": "pages/bottomModal/bottomModal",
 					"query": "number=666",
 					"scene": 1001
 				}

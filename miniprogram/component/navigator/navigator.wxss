@@ -1,5 +1,5 @@
 :host {
-    color: #66666;
+    color: #666666;
 }
 .cus-nav{
     height: 32px;

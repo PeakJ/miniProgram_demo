@@ -32,5 +32,31 @@ Component({
       };
       this.triggerEvent('myBack', myEventDetail, myEventOption);
     }
-  }
+  },
+  created(){
+    console.log('navigator创建')
+  },
+  attached() {
+    console.log('navigator attached') 
+  },
+  ready(){
+    console.log('navigator布局完成')
+  },
+  moved(){
+    console.log('navigator节点位置移动')
+  },
+  detached() {
+    console.log('navigator组件销毁')
+  },
+  pageLifetimes: {
+    show() {
+     console.log('pageLifetimes-show')
+    },
+    hide() {
+      console.log('pageLifetimes-hide')
+    },
+    resize(size) {
+      console.log('pageLifetimes-resize')
+    }
+  },
 });

@@ -8,4 +8,6 @@
 <view>此图片链接为云开发的云id</view>
 <image src="cloud://test-3b26eb.7465-test-3b26eb/1540980337.png" style="width:100px;height:100px;"></image>
 <button type="primary" bind:tap="previewImage">预览图片</button>
+<view class="icon-workset"></view>
+<text>此图标为字体图标</text>
 </view>

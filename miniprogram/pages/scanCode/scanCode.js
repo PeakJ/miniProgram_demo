@@ -56,10 +56,11 @@ Page({
         .then(result => {
           console.log('success:',result);
           wx.showToast({
-            title: result.data.data.title
+            title: result.data.data.title,
+            icon: 'none'
           })
         },error => {
-          wx.showToast({title:error.errMsg});
+          wx.showToast({title:error.errMsg,icon:'none'});
         })
 
   }

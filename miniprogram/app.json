@@ -48,21 +48,27 @@
     }
   },
   "tabBar": {
+    "custom": false,
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component_HL.png"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "日志",
+        "iconPath": "images/icon_API.png",
+        "selectedIconPath": "images/icon_API_HL.png"
       }
     ],
-    "color": "#ffffff",
-    "selectedColor": "#ffe901",
-    "backgroundColor": "#07b195",
+    "color": "#333333",
+    "selectedColor": "#4ba946",
+    "backgroundColor": "#ffe285",
     "position": "bottom"
   },
+  "usingComponents": {},
   "window": {
     "navigationBarTitleText": "小功能",
     "navigationBarBackgroundColor": "#ffffff",

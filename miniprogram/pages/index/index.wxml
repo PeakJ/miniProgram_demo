@@ -7,7 +7,7 @@
     <navigator url="{{item.route}}" class="menu-item border-bottom" 
     hover-stop-propagation="{{true}}" hover-class="none">
       <text class="name-text">{{item.name}}</text>
-      <icon type="download" size="16" color="green" class="icon"></icon>
+      <view class="icon-next"></view>
     </navigator>
   </block>
 </view>

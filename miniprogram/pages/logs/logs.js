@@ -1,6 +1,3 @@
-//logs.js
-const util = require('../../utils/util.js')
-
 Page({
   data: {
     logs: [
@@ -22,11 +19,17 @@ Page({
       '增加调用部分设备api功能',
       '增加调用前置摄像头拍照功能',
       '增加小程序内关注关联公众号功能',
-      '首页增加tabBar,分包预加载'
+      '首页增加tabBar,分包预加载',
+      '小程序中引入字体图标（base64背景）'
     ]
   },
-  onLoad: function () {
-  
+  onShow: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 1
+      })
+    }
   },
   onOfficialLoad(detail){
     console.log(detail)

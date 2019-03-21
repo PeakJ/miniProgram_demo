@@ -1,5 +1,4 @@
 //index.js
-
 Page({
   data: {
     menus: [
@@ -26,7 +25,7 @@ Page({
       {
         name: '轮播',
         route: '/subPackageOne/pages/banner/banner'
-      }, 
+      },
       {
         name: '丑死了的slideBar',
         route: '/pages/sliderBar/sliderBar'
@@ -63,30 +62,38 @@ Page({
         name: '滑动按钮',
         route: '/subPackageOne/pages/swipeout/index'
       },
-     {
+      {
         name: '文件下载存储读取',
         route: '/subPackageOne/pages/fileSystem/fileSystem'
       }
     ]
   },
   onReady: () => {
-
+    wx.setTabBarBadge({
+      index:1,
+      text:'19'
+    })
   },
   onShow: function (option) {
-
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
   },
   onLoad: function (option) {
     try {
       const res = wx.getStorageInfoSync()
-      console.log('keys:',res.keys);
-      console.log('currentSize:',res.currentSize);
-      console.log('limitSize:',res.limitSize)
+      console.log('keys:', res.keys);
+      console.log('currentSize:', res.currentSize);
+      console.log('limitSize:', res.limitSize)
     } catch (e) {
       console.error(e);
     };
     wx.getSavedFileList({
-      success (res) {
-        console.log('saveList:',res.fileList)
+      success(res) {
+        console.log('saveList:', res.fileList)
       }
     })
   }
