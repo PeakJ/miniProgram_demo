@@ -34,16 +34,20 @@
         "pages/controlDevice/controlDevice",
         "pages/takePhoto/takePhoto"
       ],
-      "independent":false
+      "independent": false
     }
   ],
-  "preloadRule":{
-    "pages/index/index":{
-      "packages": ["subPackageOne"],
+  "preloadRule": {
+    "pages/index/index": {
+      "packages": [
+        "subPackageOne"
+      ],
       "network": "all"
     },
-    "pages/logs/logs":{
-      "packages": ["subPackageOne"],
+    "pages/logs/logs": {
+      "packages": [
+        "subPackageOne"
+      ],
       "network": "all"
     }
   },
@@ -81,8 +85,8 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "functionalPages": true,
   "resizable": true,
   "debug": false,
-  "cloud": true
+  "cloud": true,
+  "sitemapLocation": "sitemap.json"
 }
