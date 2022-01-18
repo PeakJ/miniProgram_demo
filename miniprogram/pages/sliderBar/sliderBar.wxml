@@ -8,7 +8,7 @@
         <image src="../../images/Google.png"></image>
     </view>
     <scroll-view class="scroll-view-c" scroll-x scroll-left="{{scrollPosition}}" scroll-with-animation>
-        <view class="slider-item" wx:for="{{sliderMenu}}" wx:key="{{item.value}}" id="{{item.text}}"
+        <view class="slider-item" wx:for="{{sliderMenu}}" wx:key="value" id="{{item.text}}"
               data-item="{{item}}" bindtap="itemClick"
               style="color:{{item.textColor}};">{{item.text}}</view>
     </scroll-view>
