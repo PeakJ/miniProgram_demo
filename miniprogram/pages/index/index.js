@@ -74,7 +74,7 @@ Page({
       text:'20'
     })
   },
-  onShow: function (option) {
+  onShow: function () {
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
@@ -82,10 +82,9 @@ Page({
       })
     }
   },
-  onLoad: function (option) {
+  onLoad: function () {
     try {
       const res = wx.getStorageInfoSync()
-      console.log('keys:', res.keys);
       console.log('currentSize:', res.currentSize);
       console.log('limitSize:', res.limitSize)
     } catch (e) {

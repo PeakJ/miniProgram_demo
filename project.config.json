@@ -61,7 +61,7 @@
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.0.3",
+  "libVersion": "2.21.2",
   "appid": "wx823d45d846ece4ff",
   "projectname": "smallProject",
   "isGameTourist": false,

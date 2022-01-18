@@ -7,10 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    motto: '无毒无害',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    motto: '试一试',
+    avatarUrl: 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0',
+    hasAvatarUrl: false,
     imageData: [
       { url: '../../images/1.jpg' },
       { url: '../../images/2.jpg' },
@@ -20,43 +19,15 @@ Page({
       { url: '../../images/6.jpg' },
     ]
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (option) {
-    if (app.globalData.userInfo) {
+  onLoad: function () {
+    if (app.globalData.userAvatar) {
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true,
+        avatarUrl: app.globalData.userAvatar,
+        hasAvatarUrl: true,
         myRouter: this.route
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true,
-          myRouter: this.route
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true,
-            myRouter: this.route
-          })
-        }
       })
     }
   },
@@ -74,11 +45,12 @@ Page({
       }
     })
   },
-  getUserInfo: function (e) {
-    app.globalData.userInfo = e.detail.userInfo
+  onChooseAvatar: function (e) {
+    const { avatarUrl } = e.detail 
+    app.globalData.avatarUrl = avatarUrl
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true,
+      avatarUrl: avatarUrl,
+      hasAvatarUrl: true,
       myRouter: this.route
     })
   }

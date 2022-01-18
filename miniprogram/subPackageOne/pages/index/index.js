@@ -4,7 +4,6 @@ const app = getApp()
 Page({
   data: {
     avatarUrl: 'https://7465-test-3b26eb-1257805982.tcb.qcloud.la/user-unlogin.png?sign=93a6002a2df1cb86265b8a0691a167f5&t=1541673411',
-    userInfo: {},
     logged: false,
     takeSession: false,
     requestResult: ''
@@ -27,14 +26,13 @@ Page({
     })
   },
 
-  onGetUserInfo: function(e) {
-    if (!this.logged && e.detail.userInfo) {
+  onGetUserAvatar: function(e) {
+    if (!this.logged && e.detail.avatarUrl) {
       this.setData({
         logged: true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
+        avatarUrl: e.detail.avatarUrl,
       });
-      app.globalData.userImg = e.detail.userInfo.avatarUrl;
+      app.globalData.userImg = e.detail.avatarUrl;
     }
   },
 
