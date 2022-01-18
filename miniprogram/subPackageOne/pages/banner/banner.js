@@ -1,6 +1,4 @@
 // pages/banner/banner.js
-//获取应用实例
-const app = getApp();
 Page({
 
   /**
@@ -19,18 +17,6 @@ Page({
       { url: '../../images/6.jpg' },
     ]
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function () {
-    if (app.globalData.userAvatar) {
-      this.setData({
-        avatarUrl: app.globalData.userAvatar,
-        hasAvatarUrl: true,
-        myRouter: this.route
-      })
-    }
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -47,7 +33,6 @@ Page({
   },
   onChooseAvatar: function (e) {
     const { avatarUrl } = e.detail 
-    app.globalData.avatarUrl = avatarUrl
     this.setData({
       avatarUrl: avatarUrl,
       hasAvatarUrl: true,

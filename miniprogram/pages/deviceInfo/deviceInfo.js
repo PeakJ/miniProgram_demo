@@ -18,6 +18,7 @@ Page({
         console.log(res);
         delete res.errMsg;
         delete res.safeArea;
+        delete res.host;
         vm.setData({
           deviceInfo:res
         })

@@ -3,8 +3,8 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: 'https://7465-test-3b26eb-1257805982.tcb.qcloud.la/user-unlogin.png?sign=93a6002a2df1cb86265b8a0691a167f5&t=1541673411',
-    logged: false,
+    defaultAvatarUrl: 'https://7465-test-3b26eb-1257805982.tcb.qcloud.la/user-unlogin.png?sign=93a6002a2df1cb86265b8a0691a167f5&t=1541673411',
+    avatarUrl: '',
     takeSession: false,
     requestResult: ''
   },
@@ -21,18 +21,13 @@ Page({
         traceUser: true,
       })
     };
-    this.setData({
-      avatarUrl:app.globalData.userImg
-    })
   },
 
   onGetUserAvatar: function(e) {
-    if (!this.logged && e.detail.avatarUrl) {
+    if (e.detail.avatarUrl) {
       this.setData({
-        logged: true,
         avatarUrl: e.detail.avatarUrl,
       });
-      app.globalData.userImg = e.detail.avatarUrl;
     }
   },
 
