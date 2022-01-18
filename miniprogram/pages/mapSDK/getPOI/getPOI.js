@@ -19,8 +19,8 @@ Page({
     const that = this;
     const myAMapFun = new AMap.AMapWX({key:CONSTANT.AMP_KEY});
     const params = {
-      iconPathSelected: '../../../images/marker_on.jpg',
-      iconPath: '../../../images/marker_off.jpg',
+      iconPathSelected: '../../../images/marker_on.png',
+      iconPath: '../../../images/marker_off.png',
       success: function(data){
         markersData = data.markers;
         that.setData({

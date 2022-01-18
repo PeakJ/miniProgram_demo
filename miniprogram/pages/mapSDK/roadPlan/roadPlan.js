@@ -4,14 +4,14 @@ let myAmapFun = new AMap.AMapWX({key: CONSTANT.AMP_KEY});
 Page({
   data: {
     markers: [{
-      iconPath: "../../../images/marker.jpg",
+      iconPath: "../../../images/marker.png",
       id: 0,
       latitude: 39.989643,
       longitude: 116.481028,
       width: 23,
       height: 33
     }, {
-      iconPath: "../../../images/marker.jpg",
+      iconPath: "../../../images/marker.png",
       id: 0,
       latitude: 39.90816,
       longitude: 116.434446,

@@ -16,6 +16,8 @@ Page({
     wx.getSystemInfo({
       success: res => {
         console.log(res);
+        delete res.errMsg;
+        delete res.safeArea;
         vm.setData({
           deviceInfo:res
         })

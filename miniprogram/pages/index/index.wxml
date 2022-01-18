@@ -3,7 +3,7 @@
   <view class="menu">
     <text>发现之旅</text>
 </view>
-  <block wx:for="{{menus}}" wx:key="{{index}}">
+  <block wx:for="{{menus}}" wx:key="index">
     <navigator url="{{item.route}}" class="menu-item border-bottom" 
     hover-stop-propagation="{{true}}" hover-class="none">
       <text class="name-text">{{item.name}}</text>

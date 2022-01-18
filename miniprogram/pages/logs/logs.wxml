@@ -4,7 +4,7 @@
   <text style="font-size:12px">下面是此小程序的一些功能点，可以进入相应页面尝试。\n
     项目地址https://github.com/PeakJ/miniProgram_demo
   </text>
-  <block wx:for="{{logs}}" wx:for-item="log" wx:key="{{index}}">
+  <block wx:for="{{logs}}" wx:for-item="log" wx:key="index">
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>
   <official-account
