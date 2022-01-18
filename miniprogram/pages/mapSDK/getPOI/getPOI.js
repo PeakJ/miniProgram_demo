@@ -40,16 +40,6 @@ Page({
         })
       }
     };
-    // 22
-    myAMapFun.getRegeo({
-      success: function(data){
-        console.log('getRegeo:',data);
-      },
-      fail: function(info){
-        //失败回调
-        console.log(info)
-      }
-    });
 
     if(options && options.keywords){
       params.querykeywords = options.keywords;

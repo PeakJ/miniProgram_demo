@@ -5,9 +5,6 @@ Page({
   data: {
     tips: {}
   },
-  onLoad: function(){
-
-  },
   bindInput: function(e){
     const that = this;
     const keywords = e.detail.value;
