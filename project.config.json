@@ -5,22 +5,23 @@
   "packOptions": {
     "ignore": [
       {
-        "type": "file",
-        "value": "README.md"
+        "value": "README.md",
+        "type": "file"
       },
       {
-        "type": "folder",
-        "value": ".idea"
+        "value": ".idea",
+        "type": "folder"
       },
       {
-        "type": "folder",
-        "value": "typings"
+        "value": "typings",
+        "type": "folder"
       },
       {
-        "type": "file",
-        "value": ".gitignore"
+        "value": ".gitignore",
+        "type": "file"
       }
-    ]
+    ],
+    "include": []
   },
   "setting": {
     "urlCheck": true,
@@ -58,33 +59,19 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.21.3",
   "appid": "wx823d45d846ece4ff",
   "projectname": "smallProject",
-  "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "currentL": -1,
-      "list": []
-    },
     "miniprogram": {
       "list": [
         {
-          "id": 0,
           "name": "单页编译模式",
           "pathName": "pages/bottomModal/bottomModal",
           "query": "number=666",
@@ -92,5 +79,10 @@
         }
       ]
     }
+  },
+  "srcMiniprogramRoot": "miniprogram/",
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
   }
 }
