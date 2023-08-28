@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "custom-navigator": "../../component/navigator/navigator"
+    "test-jj":"@peiyou/advancement-system-mp"
   }
 }

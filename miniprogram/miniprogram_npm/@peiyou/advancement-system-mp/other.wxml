@@ -1,0 +1,2 @@
+<view class="index other">{{prop}}-{{name}}</view>
+<view>测试</view>

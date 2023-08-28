@@ -49,11 +49,6 @@ Page({
       scrollPosition: shouldScroll
     });
   },
-  onBack: function (event) {
-    console.log(event.detail);
-    console.log(event.currentTarget.dataset.test);
-    wx.navigateBack({});
-  },
   onLoad:function(options){
     console.log('onLoad参数:',options);
   },
