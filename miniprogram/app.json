@@ -19,18 +19,10 @@
       "root": "subPackageOne",
       "name": "subPackageOne",
       "pages": [
-        "pages/index/index",
         "pages/banner/banner",
-        "pages/userConsole/userConsole",
-        "pages/storageConsole/storageConsole",
-        "pages/databaseGuide/databaseGuide",
-        "pages/addFunction/addFunction",
-        "pages/deployFunctions/deployFunctions",
-        "pages/chooseLib/chooseLib",
         "pages/test/test",
         "pages/audio/audio",
         "pages/swipeout/index",
-        "pages/fileSystem/fileSystem",
         "pages/controlDevice/controlDevice",
         "pages/takePhoto/takePhoto"
       ],
@@ -87,7 +79,8 @@
   },
   "resizable": true,
   "debug": false,
-  "cloud": true,
+  "cloud": false,
+  "lazyCodeLoading":"requiredComponents",
   "sitemapLocation": "sitemap.json",
   "permission": {
     "scope.userLocation": {

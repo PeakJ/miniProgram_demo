@@ -1,14 +1,6 @@
 //app.j
 App({
   onLaunch: function () {
-    if (!wx.cloud) {
-      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
-    } else {
-      wx.cloud.init({
-        env: 'test-3b26eb',
-        traceUser: true,
-      })
-    };
     this.checkoutVersion();
   },
   onError: error => {
@@ -46,6 +38,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    userImg: 'https://7465-test-3b26eb-1257805982.tcb.qcloud.la/user-unlogin.png?sign=93a6002a2df1cb86265b8a0691a167f5&t=1541673411',
+    userImg: 'https://s1.ax1x.com/2022/03/07/byxz3F.md.jpg',
   }
 });

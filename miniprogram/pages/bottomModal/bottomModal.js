@@ -52,7 +52,7 @@ Page({
   },
   previewImage: function(){
     wx.previewImage({
-      urls: ['cloud://test-3b26eb.7465-test-3b26eb/1540980337.png'] // 需要预览的图片http链接列表
+      urls: ['https://s1.ax1x.com/2022/03/07/byxz3F.md.jpg'] // 需要预览的图片http链接列表
     })
   },
   onnavback: function () {

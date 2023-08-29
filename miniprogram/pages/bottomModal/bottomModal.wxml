@@ -5,8 +5,7 @@
     <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}"></view>
 </view>
 <view class="container">
-<view>此图片链接为云开发的云id</view>
-<image src="cloud://test-3b26eb.7465-test-3b26eb/1540980337.png" style="width:100px;height:100px;"></image>
+<image src="https://s1.ax1x.com/2022/03/07/byxz3F.md.jpg" style="width:100px;height:150px;"></image>
 <button type="primary" bind:tap="previewImage">预览图片</button>
 <view class="icon-workset"></view>
 <text>此图标为字体图标</text>

@@ -3,8 +3,8 @@ Page({
   data: {
     menus: [
       {
-        name: '分包云函数',
-        route: '/subPackageOne/pages/index/index'
+        name: '设备信息展示',
+        route: '/pages/deviceInfo/deviceInfo'
       },
       {
         name: '高德sdk',
@@ -13,10 +13,6 @@ Page({
       {
         name: '录音播放',
         route: '/subPackageOne/pages/audio/audio'
-      },
-      {
-        name: '设备信息展示',
-        route: '/pages/deviceInfo/deviceInfo'
       },
       {
         name: '控制设备',
@@ -62,10 +58,6 @@ Page({
         name: '滑动按钮',
         route: '/subPackageOne/pages/swipeout/index'
       },
-      {
-        name: '文件下载存储读取',
-        route: '/subPackageOne/pages/fileSystem/fileSystem'
-      }
     ]
   },
   onReady: () => {
